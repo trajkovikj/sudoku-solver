@@ -30,6 +30,16 @@
 
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 *,
 *:after,
 *:before {
@@ -77,6 +87,7 @@ body {
     padding: 6px 36px;
 
     color: var(--priamry-dark-color);
+    cursor: pointer;
 }
 
 .error-message {
@@ -243,28 +254,29 @@ body {
         height: 320px;
     }
 
-    .solve-button {
-       /*  font-size: 1.6rem;
-        margin-top: 36px;
-        padding: 12px 36px; */
-    }
-
-    .column > input {
-        
-    }
-
 }
 
 
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    :root {
+        --sqares-distance: 12px;
+    }
+
     .sudoku-container {
-        width: 620px;
-        height: 620px;
+        width: 500px;
+        height: 500px;
     }
 
     .solve-button {
+        font-size: 2rem;
+        margin-top: 36px;
+        padding: 18px 36px;
+    }
+
+    .clear-button {
         font-size: 2rem;
         margin-top: 36px;
         padding: 18px 36px;

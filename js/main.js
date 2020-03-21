@@ -1,5 +1,7 @@
 var sudokuSolver = new SudokuSolver();
 
+window.titlePressCount = 0;
+
 var errorMessageSelector = document.getElementsByClassName("error-message")[0];
 
 var columnSelectors = document.getElementsByClassName("column");
@@ -55,21 +57,27 @@ function clearGrid() {
 }
 
 function prepopulateGrid() {
-    var grid = [
-        [4, 5, 2, null, 6, 3, null, 9, null],
-        [null, null, null, 9, null, 8, null, 7, null],
-        [null, null, null, 5, 1, null, null, null, 4],
+    window.titlePressCount++;
 
-        [null, null, null, 8, 2, null, null, 1, 3],
-        [null, null, 5, null, 7, null, 6, null, null],
-        [1, 2, null, null, 9, 5, null, null, null],
+    if(window.titlePressCount >= 3) {
+        window.titlePressCount = 0;
 
-        [5, null, null, null, 8, 9, null, null, null],
-        [null, 7, null, 2, null, 1, null, null, null],
-        [null, 8, null, 4, 5, null, 1, 3, 6],
-    ];
-
-    applyInputSelectorGridValues(grid);
+        var grid = [
+            [4, 5, 2, null, 6, 3, null, 9, null],
+            [null, null, null, 9, null, 8, null, 7, null],
+            [null, null, null, 5, 1, null, null, null, 4],
+    
+            [null, null, null, 8, 2, null, null, 1, 3],
+            [null, null, 5, null, 7, null, 6, null, null],
+            [1, 2, null, null, 9, 5, null, null, null],
+    
+            [5, null, null, null, 8, 9, null, null, null],
+            [null, 7, null, 2, null, 1, null, null, null],
+            [null, 8, null, 4, 5, null, 1, 3, 6],
+        ];
+    
+        applyInputSelectorGridValues(grid);
+    }
 }
 
 
