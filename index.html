@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku solver</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="title">Sudoku Solver</div>
+
+        <div class="error-message">Invalid Data</div>
+
+        <div class="sudoku-container" id="grid">
+
+            <div id="row-1" class="row">
+                <div id="column-1-1" class="column"><input type="number" /></div>
+                <div id="column-1-2" class="column"><input type="number"  /></div>
+                <div id="column-1-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-1-4" class="column"><input type="number"  /></div>
+                <div id="column-1-5" class="column"><input type="number"  /></div>
+                <div id="column-1-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-1-7" class="column"><input type="number"  /></div>
+                <div id="column-1-8" class="column"><input type="number"  /></div>
+                <div id="column-1-9" class="column"><input type="number"  /></div>
+            </div>
+
+            <div id="row-2" class="row">
+                <div id="column-2-1" class="column"><input type="number"  /></div>
+                <div id="column-2-2" class="column"><input type="number"  /></div>
+                <div id="column-2-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-2-4" class="column"><input type="number"  /></div>
+                <div id="column-2-5" class="column"><input type="number"  /></div>
+                <div id="column-2-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-2-7" class="column"><input type="number"  /></div>
+                <div id="column-2-8" class="column"><input type="number"  /></div>
+                <div id="column-2-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+            <div id="row-3" class="row">
+                <div id="column-3-1" class="column"><input type="number"  /></div>
+                <div id="column-3-2" class="column"><input type="number"  /></div>
+                <div id="column-3-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-3-4" class="column"><input type="number"  /></div>
+                <div id="column-3-5" class="column"><input type="number"  /></div>
+                <div id="column-3-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-3-7" class="column"><input type="number"  /></div>
+                <div id="column-3-8" class="column"><input type="number"  /></div>
+                <div id="column-3-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+            <div id="row-4" class="row">
+                <div id="column-4-1" class="column"><input type="number"  /></div>
+                <div id="column-4-2" class="column"><input type="number"  /></div>
+                <div id="column-4-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-4-4" class="column"><input type="number"  /></div>
+                <div id="column-4-5" class="column"><input type="number"  /></div>
+                <div id="column-4-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-4-7" class="column"><input type="number"  /></div>
+                <div id="column-4-8" class="column"><input type="number"  /></div>
+                <div id="column-4-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+            <div id="row-5" class="row">
+                <div id="column-5-1" class="column"><input type="number"  /></div>
+                <div id="column-5-2" class="column"><input type="number"  /></div>
+                <div id="column-5-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-5-4" class="column"><input type="number"  /></div>
+                <div id="column-5-5" class="column"><input type="number"  /></div>
+                <div id="column-5-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-5-7" class="column"><input type="number"  /></div>
+                <div id="column-5-8" class="column"><input type="number"  /></div>
+                <div id="column-5-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+            <div id="row-6" class="row">
+                <div id="column-6-1" class="column"><input type="number"  /></div>
+                <div id="column-6-2" class="column"><input type="number"  /></div>
+                <div id="column-6-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-6-4" class="column"><input type="number"  /></div>
+                <div id="column-6-5" class="column"><input type="number"  /></div>
+                <div id="column-6-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-6-7" class="column"><input type="number"  /></div>
+                <div id="column-6-8" class="column"><input type="number"  /></div>
+                <div id="column-6-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+            <div id="row-7" class="row">
+                <div id="column-7-1" class="column"><input type="number"  /></div>
+                <div id="column-7-2" class="column"><input type="number"  /></div>
+                <div id="column-7-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-7-4" class="column"><input type="number"  /></div>
+                <div id="column-7-5" class="column"><input type="number"  /></div>
+                <div id="column-7-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-7-7" class="column"><input type="number"  /></div>
+                <div id="column-7-8" class="column"><input type="number"  /></div>
+                <div id="column-7-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+            <div id="row-8" class="row">
+                <div id="column-8-1" class="column"><input type="number"  /></div>
+                <div id="column-8-2" class="column"><input type="number"  /></div>
+                <div id="column-8-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-8-4" class="column"><input type="number"  /></div>
+                <div id="column-8-5" class="column"><input type="number"  /></div>
+                <div id="column-8-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-8-7" class="column"><input type="number"  /></div>
+                <div id="column-8-8" class="column"><input type="number"  /></div>
+                <div id="column-8-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+            <div id="row-9" class="row">
+                <div id="column-9-1" class="column"><input type="number"  /></div>
+                <div id="column-9-2" class="column"><input type="number"  /></div>
+                <div id="column-9-3" class="column"><input type="number"  /></div>
+                
+                <div id="column-9-4" class="column"><input type="number"  /></div>
+                <div id="column-9-5" class="column"><input type="number"  /></div>
+                <div id="column-9-6" class="column"><input type="number"  /></div>
+                
+                <div id="column-9-7" class="column"><input type="number"  /></div>
+                <div id="column-9-8" class="column"><input type="number"  /></div>
+                <div id="column-9-9" class="column"><input type="number"  /></div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="action-btn-wrapper">
+            <button class="clear-button" onclick="clearGrid()">clear</button>
+            <button class="solve-button" onclick="solveGrid()">solve</button>
+        </div>
+        
+       
+       <!--  <button onclick="prepopulateGrid()">prepopulate</button> -->
+       
+
+    </div>
+
+
+    <script src="./js/sudoku-solver.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
